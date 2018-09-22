@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Noted",
+    "version": "1.0",
+
+    "description": "Create notes anywhere and everywhere",
+    "permissions": [
+        "contextMenus",
+        "tabs",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["contentScript.js"]
+        }
+    ]
+}
